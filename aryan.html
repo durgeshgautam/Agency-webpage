@@ -5,21 +5,75 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link href="css/animate.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <style type="text/css">
+  	*{
+  		margin: 0px;
+  		padding: 0px;
+  	}
   	.carousel-inner img
   	{
   		width: 100%;
   	}
+
+  	.fa-check p
+    {
+      font-size: 10px;
+    }
+    .carousel-caption
+    {
+    	padding-bottom: 100px;
+ 
+    }
+    .nav
+    {
+    	position: fixed;
+    	width: 100%;
+    	line-height: 0px;
+    }
+    .nav ul {
+      line-height: 0px;
+      list-style: none;
+      background: rgba(0, 0, 0, 0);
+      overflow: hidden;
+      color: #fff;
+      padding-right: 0px;
+      transition: 1s;
+  }
+  .ready-btn
+  {
+  	border: 1px solid #fff;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 30px;
+    padding: 12px 40px;
+    text-align: center;
+    text-transform: uppercase;
+    
+    margin: 5px;
+    padding: 7px 20px;
+  }
+
+  .btn-outline-primary
+  {
+   border-radius: 25px;
+  }
+
   </style>
 </head>
-<body>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<body data-spy="scroll" data-target="navbar" data-offset="50">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top">
   <!-- Brand/logo -->
-  <a class="navbar-brand" href="#">
-  	<img src="brill.png" alt="logo" width="60px;" height="40px;">
+  <a class="navbar-brand page-scroll sticky-logo" href="#">
+  	<img src="techno.png" alt="logo" width="60px;" height="35px;">
   </a>
 
   <!-- Toggler/collapsibe buttton -->
@@ -34,16 +88,19 @@
       <a class="nav-link" href="#">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">About</a>
+      <a class="nav-link" href="#About">About</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Services</a>
+      <a class="nav-link" href="#Services">Services</a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" href="#Team">Team</a>
     </li>
     <li class="nav-item">
-    	<a class="nav-link" href="#">Portfolio</a>
+    	<a class="nav-link" href="#Portfolio">Portfolio</a>
     </li>
     <li class="nav-item">
-    	<a class="nav-link" href="#">Contact</a>
+    	<a class="nav-link" href="#Contact">Contact</a>
     </li>
   </ul>
 </div>
@@ -58,16 +115,28 @@
 			<li data-target="#demo" data-slide-to="2"></li>
 		</ul>
 
-		<!-- inner -->
+		<!-- wrapper for slides -->
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img src="graph.jpg" alt="graph" width="1100" height="400">
+				<img src="key.jpg" alt="graph" width="1100" height="350">
+				<div class="carousel-caption">
+					<h4 class="animated slideInDown"data-anomated-duration="2s">The Best Business Information</h4>
+					<h2 class="animated slideInDown" data-anomated-duration="10s">We're In The Business Of Get Quality Business Service</h2>
+				</div>
 			</div>
 			<div class="carousel-item">
-				<img src="hand.jpg" alt="hand" width="1100" height="400">
+				<img src="dark.jpg" alt="hand" width="1100" height="350">
+				<div class="carousel-caption">
+					<h4 class="animated bounceInRight" data-anomated-duration="2s">The Best Business Information</h4>
+					<h2 class="animated bounceInLeft" data-anomated-duration="10s">We're In The Business Of Helping You Start Your Business</h2>
+				</div>
 			</div>
 			<div class="carousel-item">
-				<img src="com.jpg" alt="com" width="1100" height="400">
+				<img src="park.jpg" alt="com" width="1100" height="350">
+				<div class="carousel-caption">
+					<h4 class="animated slideInDown" data-anomated-duration="2s">The Best Business Information</h4>
+					<h2 class="animated slideInUp" data-anomated-duration="10s">Helping Business Security & Peace of Mind for Your Family</h2>
+				</div>
 			</div>
 		</div>
 
@@ -81,22 +150,247 @@
 		</a>
 	</div>
 
+	<!-- jumbotron -->
 	<div class="jumbotron">
-  <h3 align="center"><b><u>About Business</u></b></h3>
-  <br>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-        <img src="house.jpg" alt="house" style="width: 350px; height: 300">
-      </div>
-      <div class="col-sm-6">
-        <h3>Project Maintenance</h3>
-        <p style="font-size: 10px;">Redug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure
-         aspernatur sit adipisci quaerat unde at nequeRedug Lagre dolor sit amet, 
-        consectetur adipisicing elit. Itaque quas officiis iure</p>
-      </div>
+  		<div class="section-headline services-head text-center">
+  			<div id="About">
+  				<h2>About Business</h2>
+  			</div>
+  		</div>
+  		<br>
+ 		<div class="container">
+    		<div class="row">
+      			<div class="col-sm-6" style="padding-top: 5px;">
+       				 <img class="img-responsive" src="house.jpg" alt="house" style="width: 350px; height: 240px;">
+      			</div>
+      			<div class="col-sm-6">
+        			<h4>Project Maintenance</h4>
+        			<p style="font-size: 10px;">Redug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure
+        			 aspernatur sit adipisci quaerat unde at nequeRedug Lagre dolor sit amet, 
+       				 consectetur adipisicing elit. Itaque quas officiis iure</p>
+					<p style="font-size: 10px;"> <i class="fas fa-thumbs-up" style="color: blue; font-size: 10px;"></i>&nbsp;&nbsp; Interior design Package</p>
+ 					<p style="font-size: 10px;"> <i class="fas fa-thumbs-up" style="color: blue; font-size: 10px;"></i>&nbsp;&nbsp; Building House</p>
+ 					<p style="font-size: 10px;"> <i class="fas fa-thumbs-up" style="color: blue; font-size: 10px;"></i>&nbsp;&nbsp; Reparing of Residentail Roof</p>
+ 					<p style="font-size: 10px;"> <i class="fas fa-thumbs-up" style="color: blue; font-size: 10px;"></i >&nbsp;&nbsp; Renovaion of Commercial Office</p> 
+					<p style="font-size: 10px;"> <i class="fas fa-thumbs-up" style="color: blue; font-size: 10px;"></i>&nbsp;&nbsp; Make Quality Products</p>
+        		</div>
+    		</div>
+  		</div>
+	</div>
+
+	<!-- Services -->
+	<div class="container">
+		<div class="section-headline services-head text-center">
+			<div id="Services">
+            	<h2>Our Services</h2>
+        	</div>
+        </div><br>
+    </div>
+    <div class="container">
+      	<div class="row">
+      		<div class="col-md-4">
+      			<center>
+      				<i class="fas fa-code" style="color: green;"></i>
+      				<h5 style="color: green;">Expert Coder</h5>
+      				<p style="font-size: 10px; padding-left: 18px;">will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by. </p>
+      			</center>
+      		</div>
+      		<div class="col-md-4">
+      			<center>
+      				<i class='fas fa-camera-retro' style="color: red;"></i>
+      				<h5 style="color: red;">Creative Designer</h5>
+      				<p style="font-size: 10px; padding-left: 18px;">will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.</p>
+      		</center>
+      		</div>
+      		<div class="col-md-4">
+      			<center>
+      				<i class="fab fa-wordpress" style="color: orange;"></i>
+      				<h5 style="color: orange;">Wordpress Developer</h5>
+      				<p style="font-size: 10px; padding-left: 10px;">will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.</p>
+      			</center>
+      		</div>
+      		<div class="row">
+      			<div class="col-md-4">
+      				<center>
+      					<i class="fas fa-code" style="color: blue;"></i>
+      					<h5 style="text-align: center; color: blue">Social Marketer</h5>
+      					<p style="font-size: 10px; padding-left: 18px;">will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by. </p>
+      				</center>
+      		</div>
+      		<div class="col-md-4">
+      			<center>
+      				<i class='fas fa-camera-retro' style="color: red;"></i>
+      				<h5 style="color: red; text-align: center;">Seo Expart</h5>
+      				<p style="font-size: 10px; padding-left: 18px;">will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.</p>
+      			</center>
+      		</div>
+      		<div class="col-md-4">
+      			<center>
+      				<i class="fab fa-wordpress" style="color: orange;"></i>
+      				<h5 style="color: orange; text-align: center;">24/7 Support</h5>
+      				<p style="font-size: 10px; padding-left: 18px;">will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.</p>
+      			</center>
+      		</div>
+      			
+      		</div>
+
+      	</div>
+      </div><br>
+
+      
+      <!-- Image Overlay Card -->
+	<div class="card pmd-card bg-dark text-white text-center overlay-card">
+			<!-- Background Image -->
+				<img src="https://pro.propeller.in/assets/images/profile-pic-300.png" class="pmd-card-media" style="height: 200px;">
+	
+			<!-- Text Overlay -->
+			<div class="card-img-overlay">
+				<h3 class="card-title">A Developer Library</h3>
+				<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>Sed feugiat arcu ut orci porta, eget porttitor felis suscipit. </p>
+			</div>
+	</div><br>
+
+
+	<!--Card image -->
+	<div class="container">
+		<div class="section-headline team-head text-center">
+			<div id="Team">
+            	<h2>Our Spacial Team</h2>
+        	</div>
+        </div><br>
+    </div>
+	<div class="container">
+  	<div class="row">
+  		<div class="col-sm-4">
+  			<center>
+  			 <div class="card" style="width:200px">
+    			<img class="card-img-top" src="park.jpg" alt="Card image" style="width:100%;">
+   				<div class="card-body">
+    			<h5 class="card-title">Durgesh Gautam</h5>
+      			<p class="card-text">Web Developer</p>
+  				</div>
+  			</div>
+  		</center>
+  		</div>
+  		<div class="col-sm-4">
+  			<center>
+  			 <div class="card" style="width:200px;">
+    			<img class="card-img-top" src="park.jpg" alt="Card image" style="width:100%">
+   				<div class="card-body" >
+    			<h5 class="card-title" style="font-weight: 100px;">Shahrukh</h5>
+      			<p class="card-text" style="font-weight: 100px;">Android Developer</p>
+  				</div>
+  			</div>
+  		</center>
+  		</div>
+  		<div class="col-sm-4">
+  			<center>
+  			 <div class="card" style="width:200px">
+    			<img class="card-img-top" src="key.jpg" alt="Card image" style="width:100%">
+   				<div class="card-body">
+    			<h5 class="card-title">Sohan Rajpoot</h5>
+      			<p class="card-text">Web Developer</p>
+  				</div>
+  			</div>
+  		</center>
+  		</div>
+  		<div class="row" style="margin: 4px;">
+  			<div class="col-sm-4">
+  			<center>
+  			 	<div class="card" style="width:200px">
+    				<img class="card-img-top" src="park.jpg" alt="Card image" style="width:100%;">
+   					<div class="card-body">
+    					<h5 class="card-title">Poonam Kaith</h5>
+      					<p class="card-text">Web Developer</p>
+  					</div>
+  				</div>
+  			</center>
+  			</div>
+  		<div class="col-sm-4">
+  			<center>
+  			 <div class="card" style="width:200px; margin-left: 5px;">
+    			<img class="card-img-top" src="park.jpg" alt="Card image" style="width:100%">
+   				<div class="card-body">
+    			<h5 class="card-title">Ayushi</h5>
+      			<p class="card-text">Web Designing</p>
+  				</div>
+  			</div>
+  		</center>
+  		</div>
+  		<div class="col-sm-4">
+  			<center>
+  			 <div class="card" style="width:200px; margin-left: 10px;">
+    			<img class="card-img-top" src="key.jpg" alt="Card image" style="width:100%">
+   				<div class="card-body">
+    			<h5 class="card-title">Nitin Gupta</h5>
+      			<p class="card-text">Web Developer</p>
+  				</div>
+  			</div>
+  		</center>
+  		</div>
+  		</div>
+
+  	</div>
+</div><br><br>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6" style="padding: 0px;">
+      <img src="kitchen.jpg" alt="kitchen" style="width: 100%; height: 231px;">
+    </div>
+    <div class="col-sm-6" style="padding: 0px;">
+    	 <!-- Image Overlay Card -->
+	<div class="card pmd-card bg-dark text-white text-center overlay-card">
+			<!-- Background Image -->
+				<img src="dry.jpg" alt="dry" class="pmd-card-media" style="width: 100%; height: 229px;">
+	
+			<!-- Text Overlay -->
+			<div class="card-img-overlay text-center">
+				
+				<h4  style="padding-bottom: 0px;">WORKING WITH US</h4>
+				<h6  style="padding-bottom: 0px;">WEB DESIGN, READY HOME, CONSTRUCTION AND CO-OPERATE OUTSTANDING BUILDINGS.</h6>
+				<a href="#contact" class="ready-btn" >Contact us</a>
+			
+			</div>
+	</div>
     </div>
   </div>
+</div><br>
+
+<div class="container">
+	<div class="section-headline Portfolio-text text-center">
+		<div id="Portfolio">
+			<h2>Portfolio</h2>
+		</div>
+		<button type="button" class="btn btn-outline-primary active" style="font-size: 10px;">Primary</button>&nbsp;&nbsp;
+  		<button type="button" class="btn btn-outline-primary" style="font-size: 10px;">Primary</button>&nbsp;&nbsp;
+  		<button type="button" class="btn btn-outline-primary" style="font-size: 10px;">Primary</button>&nbsp;&nbsp;
+  		<button type="button" class="btn btn-outline-primary" style="font-size: 10px;">Primary</button>&nbsp;&nbsp;
+	</div>
+</div><br>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-4">
+			<img src="park.jpg" alt="dur" style="width: 100%; height: 150px;">
+		</div>
+		<div class="col-sm-4">
+			<img src="park.jpg" alt="dur" style="width: 100%; height: 150px;">
+		</div>
+		<div class="col-sm-4">
+			<img src="park.jpg" alt="dur" style="width: 100%; height: 150px;">
+		</div><br><br>
+		<div class="row" style="margin: 4px 3px;">
+			<div class="col-sm-4" style="margin-left: px;">
+			<img src="park.jpg" alt="dur" style="width: 100%; height: 150px;">
+		</div>
+		<div class="col-sm-4" style="padding-left: -3px;">
+			<img src="park.jpg" alt="dur" style="width: 100%; height: 150px;">
+		</div>
+		<div class="col-sm-4" style="padding-left: -3px;">
+			<img src="park.jpg" alt="dur" style="width: 100%; height: 150px;">
+		</div>
+		</div>
+	</div>
 </div>
 
 </body> 
